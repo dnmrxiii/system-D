@@ -125,36 +125,80 @@ th {
   margin-top: 40px;
   font-size: 14px;
 }
-@media (max-width: 768px) {
-  .tootle-menu {
-    display: block;
-    margin-left: auto;
+  @media (max-width: 720px) {
+
+    .tootle-menu {
+        display: block;
+    }
+
+    header {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    nav {
+        padding: 10px;
+        flex-direction: row;
+        align-items: center;
+        display: flex;
+    }
+
+    nav #school {
+        font-size: 0.9em ;
+        padding: 2%;
+    }
+
+    nav .logo img {
+        width: 3em;
+        height: auto;
+    }
+
+
+    .mainMenu {
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        position: absolute;
+        top: 10%;
+        left: 0;
+        background: linear-gradient(to right, #0B6623, #16CC46);
+        padding: 10px 0;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+        gap: 10px;
+        z-index: 100;
+        opacity: 0;
+        transform: translateY(-10px);
+        pointer-events: none;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .mainMenu.active {
+        opacity: 0.9;
+        transform: translateY(0);
+        pointer-events: auto;
+    }
+  .page-content {
+    padding: 16px;
   }
 
-  .mainMenu {
-    flex-direction: column;
+  table {
+    display: block;
     width: 100%;
-    display: none;
-    margin-top: 10px;
-    background-color: #0B6623;
-    border-radius: 5px;
-    padding: 10px 0;
+    overflow-x: auto;
+    white-space: nowrap;
   }
-
-  .mainMenu.active {
-    display: flex;
-  }
-
-  .tootle-menu {
-    display: block;
-  }
-
   .footer-container {
     flex-direction: column;
     align-items: center;
+    gap: 0;
   }
-
   .footer-column {
     margin: 15px 0;
+    min-width: 0;
+    width: 100%;
+    text-align: center;
+  }
+  .logo-section {
+    justify-content: center;
   }
 }
