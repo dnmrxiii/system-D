@@ -1,0 +1,160 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+  background: #f1f1f1;
+}
+.tootle-menu {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  user-select: none;
+  margin-left: auto;
+  color: white;
+}
+.page-content {
+  flex: 1 0 auto;
+  padding: 30px;
+}
+
+.container-attend h1 {
+  color: green;
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+th, td {
+  padding: 12px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+th {
+  background-color: green;
+  color: white;
+}
+
+.timeBtn {
+  padding: 6px 12px;
+  margin: 2px;
+  border: none;
+  border-radius: 5px;
+  background-color: #28a745;
+  color: white;
+  cursor: pointer;
+}
+
+.timeBtn[data-type="out"] {
+  background-color: #dc3545;
+}
+
+.timeBtn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.bpc-footer {
+  flex-shrink: 0;
+  background-color: #0d6217;
+  color: white;
+  padding: 40px 20px 10px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-column {
+  flex: 1 1 200px;
+  min-width: 200px;
+}
+
+.footer-column h3 {
+  color: white;
+  margin-bottom: 10px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column li {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+  color: white;
+}
+
+.footer-column i {
+  color: #ffeb3b;
+  font-size: 20px;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bpc-logo {
+  max-width: 100px;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid #ddd;
+  margin-top: 40px;
+  font-size: 14px;
+}
+@media (max-width: 768px) {
+  .tootle-menu {
+    display: block;
+    margin-left: auto;
+  }
+
+  .mainMenu {
+    flex-direction: column;
+    width: 100%;
+    display: none;
+    margin-top: 10px;
+    background-color: #0B6623;
+    border-radius: 5px;
+    padding: 10px 0;
+  }
+
+  .mainMenu.active {
+    display: flex;
+  }
+
+  .tootle-menu {
+    display: block;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-column {
+    margin: 15px 0;
+  }
+}
