@@ -12,9 +12,9 @@ body {
   user-select: none;
 }
 .main {
-  max-width: 900px;
-  margin: 30px auto;
-  padding: 0 20px;
+    max-width: 100%;
+    margin: 20px auto;
+    padding: 0 15px;
 }
 .main h1 {
   text-align: center;
@@ -235,19 +235,26 @@ table#gradeTable td {
     margin-left: auto;
   }
 
-  .mainMenu {
+ .mainMenu {
     flex-direction: column;
+    text-align: center;
     width: 100%;
-    display: none;
-    margin-top: 10px;
-    background-color: #0B6623;
-    border-radius: 5px;
-    padding: 10px 0;
-  }
-
-  .mainMenu.active {
-    display: flex;
-  }
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background: linear-gradient(to right, #0B6623, #16CC46);
+    padding: 15px 0;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.mainMenu.active {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
 
   .tootle-menu {
     display: block;
